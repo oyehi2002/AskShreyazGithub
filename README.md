@@ -1,6 +1,7 @@
 ﻿# Shreya's GitHub RAG Assistant
 
 A LangGraph-powered Retrieval Augmented Generation (RAG) application that answers questions about Shreya Ramraika's( mine :) ) GitHub projects using AI-driven search and analysis.
+**Please note the RAG assistant doesn't include info of this repositary**
 
 ## 🚀 Features
 
@@ -48,4 +49,5 @@ python main.py
 ## 🔧 Configuration
 
 The application uses a recursion limit of 10 to prevent infinite loops and includes proper error handling for robust operation.
+
 
