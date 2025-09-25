@@ -20,7 +20,7 @@ print("Current working directory:", os.getcwd())
 print("USER_AGENT from .env:", os.getenv('USER_AGENT'))
 print("USER_AGENT in os.environ:", os.environ.get('USER_AGENT', 'NOT SET'))
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-lite")
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-lite", temperature=0)
 
 
 class RAGstate(TypedDict):
@@ -32,7 +32,7 @@ headers = {
 }
 
 websites = ["https://github.com/oyehi2002/stockanalysisAI", "https://github.com/oyehi2002/AIreserarchagentb2b",
-            "https://github.com/oyehi2002/autoorganizeAI", "https://github.com/oyehi2002/AIautoimagecap", "https://github.com/oyehi2002/secmsg", "https://github.com/oyehi2002/AskShreyazGithub"]
+            "https://github.com/oyehi2002/autoorganizeAI", "https://github.com/oyehi2002/AIautoimagecap", "https://github.com/oyehi2002/secmsg",]
 
 loader = WebBaseLoader(web_paths=websites, header_template=headers)
 loaded_file = loader.load()
@@ -109,7 +109,7 @@ ready_bot = graph.compile()
 while True:
     user_input = input(
         "\n (Type exit/quit to end) \nPlease enter what you wanna know about Shreya Ramraika's github: ")
-    if user_input.lower() in ['exit', 'quit', '']:
+    if user_input.lower() in ['exit', 'quit']:
         break
 
     messages = [HumanMessage(content=user_input)]
