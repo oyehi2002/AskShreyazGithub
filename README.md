@@ -37,17 +37,4 @@ python main.py
 - **LangGraph Agent**: Manages conversation flow and tool usage
 - **Retrieval Tool**: Searches relevant project information
 
-### Monitored Repositories
-
-- stockanalysisAI
-- AIreserarchagentb2b
-- autoorganizeAI
-- AIautoimagecap
-- secmsg
-
-## 🔧 Configuration
-
-The application uses a recursion limit of 10 to prevent infinite loops and includes proper error handling for robust operation.
-
-
 
